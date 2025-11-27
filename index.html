@@ -10,6 +10,20 @@
     <link href="https://fonts.googleapis.com/css2?family=Caveat" rel="stylesheet">
 
     <style>
+
+        @font-face {
+            font-family: 'Tovar';
+            src: url('fonts/Tovar-kolobov.woff') format('woff');
+            font-display: swap;
+        }
+
+        @font-face {
+            font-family: 'Akony';
+            src: url('fonts/Macherie-SemiBold.woff') format('woff');
+            font-display: swap;
+        }
+        
+
         body {
             margin: 0;
             padding: 0;
@@ -34,13 +48,14 @@
         }
 
         h2 {
-            margin-bottom: 40px;
-            padding: 0 10px;
+            /* margin-bottom: 20px; */
+            /* padding: 0 10px; */
             color: red;
-            font-family: "Caveat", cursive;
+            font-family: "Akony";
             font-optical-sizing: auto;
-            font-weight: 900;
+            font-weight: 300;
             font-style: normal;
+            font-size: 20px;
         }
 
         a {
@@ -55,19 +70,38 @@
             border-radius: 10px;
             font-size: 18px;
             /* font-weight: bold; */
-            font-family: "Caveat", cursive;
+            font-family: "Tovar", cursive;
             font-optical-sizing: auto;
-            font-weight: 900;
+            font-weight: 500;
             font-style: normal;
         }
 
         .frame {
             max-width: 500px;
             background: rgba(255, 255, 255, 0.9);
-            margin: 0 auto;
+            margin: 260px auto;
             padding-top: 10px;
             padding-bottom: 10px;
             border-radius: 6px;
+        }
+
+        .frame .ttl-1 {
+            color: red;
+            font-family: "Akony";
+            font-optical-sizing: auto;
+            font-weight: 300;
+            font-style: normal;
+            font-size: 24px;
+        }
+
+        .frame .ttl {
+            margin-top: 10px;
+            color: red;
+            font-family: "Akony";
+            font-optical-sizing: auto;
+            font-weight: 300;
+            font-style: normal;
+            font-size: 32px;
         }
 
 
@@ -107,12 +141,14 @@
 
 <body>
 <div class="frame">
-    <div class="ttl"><h2>Путешествуй: Самарская область</h2></div>
+    <!-- <h2>Путешествуй:</h2> -->
+    <div class="ttl">Путешествуй:</div>
+    <div class="ttl-1">Самарская область</div>
     <div class="btn-1"><a href="https://vk.com/samaravisit">Наше сообщество в VK</a></div>
     <div class="btn-2"><a href="https://t.me/samaravisit">Telegram-канал</a></div>
 </div>
 
-<img loading="lazy" src="images/symbols.webp" alt="" class="bg-image">
+<img loading="lazy" src="images/symbols2.webp" alt="" class="bg-image">
 
 <script>
     const amount = 50;
