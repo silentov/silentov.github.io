@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Путешествуй: Самарская область</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background: #cc2c0c;
+            font-family: Arial, sans-serif;
+            text-align: center;
+            padding-top: 60px;
+            color: white;
+            overflow-x: hidden;
+            min-height: 100vh;
+        }
+
+        h2 {
+            margin-bottom: 40px;
+            padding: 0 10px;
+        }
+
+        a {
+            display: block;
+            margin: 20px auto;
+            padding: 15px 25px;
+            max-width: 300px;
+            width: 80%;
+            background: white;
+            color: #cc2c0c;
+            text-decoration: none;
+            border-radius: 10px;
+            font-size: 18px;
+            font-weight: bold;
+        }
+
+        /* Snowflake Base Style */
+        .snowflake {
+            position: fixed;
+            top: -10vh;
+            pointer-events: none;
+            color: white;
+            animation-name: fall, horizontal;
+            animation-timing-function: linear, ease-in-out;
+            animation-iteration-count: infinite, infinite;
+            will-change: transform;
+            z-index: 9999;
+        }
+
+        @keyframes fall {
+            from { transform: translate3d(0, -10vh, 0); opacity: 1; }
+            to   { transform: translate3d(0, 120vh, 0); opacity: 0.5; }
+        }
+
+        @keyframes horizontal {
+            0%   { margin-left: -20px; }
+            50%  { margin-left: 20px; }
+            100% { margin-left: -20px; }
+        }
+
+        /* Mobile optimization */
+        @media (max-width: 480px) {
+            h2 { font-size: 22px; }
+            a { font-size: 16px; padding: 12px 20px; }
+        }
+    </style>
+</head>
+
+<body>
+
+<h2>Путешествуй: Самарская область</h2>
+
+<a href="https://vk.com/samaravisit">Наше сообщество в VK</a>
+<a href="https://t.me/samaravisit">Telegram-канал</a>
+
+<script>
+    const amount = 50;
+
+    for (let i = 0; i < amount; i++) {
+        let flake = document.createElement("div");
+        flake.className = "snowflake";
+        flake.textContent = "❄";
+
+        const size = Math.random() * 25 + 20;   // Larger snowflakes: 20–45px
+        const left = Math.random() * 100;       // Spread across the full width
+
+        const fall = Math.random() * 6 + 6;     // Fall duration
+        const sway = Math.random() * 3 + 3;     // Side-to-side duration
+
+        flake.style.fontSize = size + "px";
+        flake.style.left = left + "vw";
+
+        flake.style.animationDuration = fall + "s, " + sway + "s";
+        flake.style.animationDelay = Math.random() * 5 + "s";
+
+        document.body.appendChild(flake);
+    }
+</script>
+
+</body>
+</html>
